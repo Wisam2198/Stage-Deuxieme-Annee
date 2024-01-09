@@ -1,56 +1,251 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Maquette page Solti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 3s, transform 3s;
+    }
+
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .custom-arrow-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 20px;
+    }
+
+    .custom-arrow {
+      font-size: 100px;
+      color: #fff;
+      margin-top: 10px;
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+
+    .custom-arrow-container-0 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+
+    .custom-arrow-0 {
+      font-size: 100px;
+      color: #fff;
+      margin-top: 10px;
+      display: inline-block;
+      transform: rotate(135deg);
+    }
+
+    .owl-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .owl-item {
+      text-align: center;
+    }
+
+    .owl-item img {
+      max-width: 70%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .image {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .image.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image:hover {
+      transform: scale(1.2);
+    }
+
+    /* Styles for Owl Carousel navigation arrows */
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    .owl-prev,
+    .owl-next {
+      font-size: 3rem;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+
+    .owl-prev:hover,
+    .owl-next:hover {
+      color: #3367fb;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var $soltiScan = $("#SoltiScan");
+      var $images = $(".image-container .owl-item");
+
+      $(window).on("scroll", function () {
+        var scrollPosition = $(this).scrollTop();
+        var soltiScanPosition = $soltiScan.offset().top;
+
+        if (scrollPosition + $(window).height() > soltiScanPosition) {
+          $soltiScan.addClass("active");
+          $images.each(function (index) {
+            var $image = $(this);
+            setTimeout(function () {
+              $image.addClass("active");
+            }, index * 500);
+          });
+        }
+      });
+
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        nav: true, // Show navigation arrows
+        navText: [
+          "<div class='owl-prev'><i class='bi bi-chevron-left'></i></div>",
+          "<div class='owl-next'><i class='bi bi-chevron-right'></i></div>"
+        ], // Custom navigation arrows
+      });
+    });
+  </script>
 </head>
-<body style="background-color: rgb(214, 208, 208);">
-  <nav class="navbar navbar-expand-lg" style="background-color: #ececec;">
+
+<body style="background-color: rgb(214, 208, 208)">
+  <nav class="navbar navbar-expand-lg" style="background-color: #f1ecd3">
     <div class="container-fluid">
-      <img src="../Premier_projet/images/Logo-Solti-Petit.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top me-2"> <!-- Ajout de la classe me-2 pour une marge à droite -->
+      <img src="../Premier_projet/images/Logo-Solti-Petit.png" alt="Logo" width="35" height="35"
+        class="d-inline-block align-text-top me-2" />
       <a class="navbar-brand">Solti</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="Accueil.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Produits.html">Produits</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="SoltiScan.html">SoltiScan</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Valeurs.html">Nos valeurs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Avis.html">Avis</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Plus.html">Plus</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Accueil.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Produits.html">Produits</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="SoltiScan.html">SoltiScan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Valeurs.html">Nos valeurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Avis.html">Avis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Plus.html">Plus</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <div id="titre" style="margin-left: 300px; margin-top: 50px;" class="d-flex align-items-center" >
-        <div class="ms-3">
-            <img src="../Premier_projet/images/Logo-Solti.png" class="mx-auto d-block" height="150" width="300" alt="Logo-Solti">
-        </div>
-        <div>
-            <h1 class="titre ms-5" style="color: #3367Fb;">Bienvenue chez SOLTI</h1>
-        </div>
-    </div><br><br>
-    <h2 style="color: #06d110; text-align: center;">Des logiciels agiles, simples et puissants.</h2><br>
-    <img src="../Premier_projet/images/solutions.png" class="mx-auto d-block">
+  <div id="titre" style="margin-left: 300px; margin-top: 50px" class="d-flex align-items-center">
+    <div class="ms-3">
+      <img src="../Premier_projet/images/Logo-Solti.png" class="mx-auto d-block" height="150" width="300"
+        alt="Logo-Solti" />
+    </div>
+    <div>
+      <h1 class="titre ms-5" style="color: #3367fb">Bienvenue chez SOLTI</h1>
+    </div>
+  </div>
+  <br /><br />
+  <h2 style="color: #0d9714; text-align: center; font-weight: bold">
+    Des logiciels agiles, simples et puissants.
+  </h2>
+  <br />
+  <img src="../Premier_projet/images/solutions.png" class="mx-auto d-block" />
+  <div id="SoltiScan" class="fade-in" style="background-color: #3367fb">
+    <h2 style="color: rgb(214, 208, 208); text-align: center; font-weight: bold">
+      SoltiScan
+    </h2>
+    <br /><br />
+    <div class="custom-arrow-container">
+      <h4 style="margin-left: 20px">
+        Découvrez nos solutions faciles <br />et puissantes grâce à notre
+        vidéo.
+      </h4>
+      <div class="custom-arrow">&rarr;</div>
+    </div>
+    <iframe class="mx-auto d-block" width="890" height="500"
+      src="https://logiciel-gestion-stock.fr/video/00-video-logiciel-de-stock-gsm.mp4" frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe><br />
+    <div class="custom-arrow-container-0">
+      <div class="custom-arrow-0">&rarr;</div>
+      <h4 style="text-align: left; margin-right: 20px">
+        Ainsi qu'en photo ci-dessous.
+      </h4>
+    </div>
+
+    <div class="owl-carousel image-container">
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img1.png" alt="Image 1"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img2.png" alt="Image 2"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img3.jpg" alt="Image 3"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img4.jpg" alt="Image 4"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img5.jpg" alt="Image 5"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img6.jpg" alt="Image 6"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img7.jpg" alt="Image 7"></div>
+      <div class="item"><img src="../Premier_projet/images/solti-scan/img8.png" alt="Image 8"></div>
+    </div>
+  </div>
+  </div>
 </body>
+
 </html>
