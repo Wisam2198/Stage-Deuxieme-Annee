@@ -1,60 +1,4 @@
-<div id="Produits" style="background-color: #ececec;">
-      <h1 style="text-align: center;">Nos Produits</h1> <br>
-
-      <div class="card-deck d-flex justify-content-around mb-4 mx-4">
-        <div class="card rounded-5" style="width: 18rem;"> <!-- Ajustez la largeur de la carte selon vos besoins -->
-          <img src="../Premier_projet/images/produits/GSM.png" class="card-img-top" alt="GSM" style="height: 200px; object-fit: cover;">
-          <div class="card-img-overlay">
-            <p class="scroll-text" onclick="window.location.href='#'" style="color: #0d9714;">En savoir plus..</p>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">GSM</h3>
-            <h6 class="card-text">9048 Installés</h6>
-            <p class="card-text">Logiciel de gestion de stock, pour toutes les tailles d'entreprises et tous les métiers.</p>
-          </div>
-        </div>
-    
-        <div class="card rounded-5" style="width: 18rem;">
-          <img src="../Premier_projet/images/produits/SODA.png" class="card-img-top" alt="SODA" style="height: 200px; object-fit: cover;">
-          <div class="card-img-overlay">
-            <p class="scroll-text" onclick="window.location.href='#'" style="color: #0d9714;">En savoir plus..</p>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">SODA</h3>
-            <h6 class="card-text">478 Installés</h6>
-            <p>Logiciel de partage de données révolutionnaire: polyvalent et universel.</p>
-          </div>
-        </div>
-    
-        <div class="card rounded-5" style="width: 18rem;">
-          <img src="../Premier_projet/images/produits/YODA.png" class="card-img-top" alt="YODA" style="height: 200px; object-fit: cover;">
-          <div class="card-img-overlay">
-            <p class="scroll-text" onclick="window.location.href='#'" style="color: #0d9714;">En savoir plus..</p>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">YODA</h3>
-            <h6 class="card-text">50 Installés</h6>
-            <p>Prospection commerciale et gestion de clientèle qui intègre parfaitement Excel, Word et Outlook.</p>
-          </div>
-        </div>
-    
-        <div class="card rounded-5" style="width: 18rem;">
-          <img src="../Premier_projet/images/produits/GMAO.png" class="card-img-top" alt="GMAO" style="height: 200px; object-fit: cover;">
-          <div class="card-img-overlay">
-            <p class="scroll-text" onclick="window.location.href='#'" style="color: #0d9714;">En savoir plus..</p>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">GMAO</h3>
-            <h6 class="card-text">50 Installés</h6>
-            <p>Options de GSM pour piloter vos équipes de maintenance et vos interventions...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-
-  <style>
+<style>
     .card-img-overlay {
       background: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
       opacity: 0; /* Opacité initiale à 0 pour l'effet de survol */
@@ -74,31 +18,37 @@
       cursor: pointer;
     }
 
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
     
   </style>
 
+
+
+
+
+
+
+
+
 <script>
-  // Ajoutez ce script à la fin du body ou utilisez-le dans un fichier externe
+  
   document.addEventListener('DOMContentLoaded', function () {
     var cards = document.querySelectorAll('.card');
+    var animationSpeed = 200;
 
-    cards.forEach(function (card) {
-      card.addEventListener('mouseenter', function () {
-        var scrollText = card.querySelector('.scroll-text');
-        scrollText.style.animation = 'scrollAnimation 1s infinite linear';
-      });
-
-      card.addEventListener('mouseleave', function () {
-        var scrollText = card.querySelector('.scroll-text');
-        scrollText.style.animation = '';
-      });
+    cards.forEach(function (card, index) {
+      setTimeout(function () {
+        card.classList.add('visible');
+      }, index * animationSpeed);
     });
   });
 </script>
-
-  
-  
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
