@@ -173,7 +173,7 @@
             <a class="nav-link" href="#accueil">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Produits.html">Produits</a>
+            <a class="nav-link" href="#Produits">Produits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#SoltiScan">SoltiScan</a>
@@ -195,6 +195,8 @@
     </div>
   </nav>
 
+  <!----------------------Accueil---------------------->
+
   <div id="accueil">
     <div id="titre" style="margin-left: 300px; margin-top: 100px" class="d-flex align-items-center">
       <div class="ms-3">
@@ -212,7 +214,116 @@
     <br />
     <img src="../Premier_projet/images/solutions.png" class="mx-auto d-block" />
   </div>
-  <div id="SoltiScan" class="fade-in soltiScan" style="background-color: #3367fb">
+
+  <!----------------------Produits---------------------->
+
+  <div id="Produits" style="background-color: rgb(109, 103, 103); margin-top: 0; margin-bottom: 0;">
+    <h1 style="text-align: center; color: #fff;">Nos Produits</h1> <br><br>
+
+    <div class="card-deck d-flex justify-content-around mx-4">
+      <div class="card rounded-5" style="width: 18rem;">
+        <img src="../Premier_projet/images/produits/GSM.png" class="card-img-top" alt="GSM"
+          style="height: 200px; object-fit: cover;">
+        <div class="card-img-overlay">
+          <p class="scroll-text" onclick="window.location.href='#'" style="color: #00ff0d; font-weight: bold;">En savoir plus..</p>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">GSM</h3>
+          <h6 class="card-text">9048 Installés</h6>
+          <p class="card-text">Logiciel de gestion de stock, pour toutes les tailles d'entreprises et tous les métiers.
+          </p>
+        </div>
+      </div>
+
+      <div class="card rounded-5" style="width: 18rem;">
+        <img src="../Premier_projet/images/produits/SODA.png" class="card-img-top" alt="SODA"
+          style="height: 200px; object-fit: cover;">
+        <div class="card-img-overlay">
+          <p class="scroll-text" onclick="window.location.href='#'" style="color: #00ff0d; font-weight: bold;">En savoir plus..</p>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">SODA</h3>
+          <h6 class="card-text">478 Installés</h6>
+          <p>Logiciel de partage de données révolutionnaire: polyvalent et universel.</p>
+        </div>
+      </div>
+
+      <div class="card rounded-5" style="width: 18rem;">
+        <img src="../Premier_projet/images/produits/YODA.png" class="card-img-top" alt="YODA"
+          style="height: 200px; object-fit: cover;">
+        <div class="card-img-overlay">
+          <p class="scroll-text" onclick="window.location.href='#'" style="color: #00ff0d; font-weight: bold;">En savoir plus..</p>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">YODA</h3>
+          <h6 class="card-text">50 Installés</h6>
+          <p>Prospection commerciale et gestion de clientèle qui intègre parfaitement Excel, Word et Outlook.</p>
+        </div>
+      </div>
+
+      <div class="card rounded-5" style="width: 18rem;">
+        <img src="../Premier_projet/images/produits/GMAO.png" class="card-img-top" alt="GMAO"
+          style="height: 200px; object-fit: cover;">
+        <div class="card-img-overlay">
+          <p class="scroll-text" onclick="window.location.href='#'" style="color: #00ff0d; font-weight: bold;">En savoir plus..</p>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">GMAO</h3>
+          <h6 class="card-text">50 Installés</h6>
+          <p>Options de GSM pour piloter vos équipes de maintenance et vos interventions...</p>
+        </div>
+      </div>
+    </div><br><br>
+  </div>
+
+
+  <style>
+    .card-img-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .card:hover .card-img-overlay {
+      opacity: 1;
+    }
+
+    .scroll-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var cards = document.querySelectorAll('.card');
+      var animationSpeed = 400;
+      cards.forEach(function (card, index) {
+        setTimeout(function () {
+          card.classList.add('visible');
+        }, index * animationSpeed);
+      });
+    });
+  </script>
+
+  <!----------------------SoltiScan---------------------->
+
+  <div id="SoltiScan" class="fade-in soltiScan" style="background-color: #3367fb;">
     <h2 style="color: rgb(214, 208, 208); text-align: center; font-weight: bold">
       SoltiScan
     </h2>
