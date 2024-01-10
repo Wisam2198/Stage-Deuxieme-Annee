@@ -1,0 +1,54 @@
+<style>
+    .card-img-overlay {
+      background: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+      opacity: 0; /* Opacité initiale à 0 pour l'effet de survol */
+      transition: opacity 0.4s ease-in-out; /* Transition de l'opacité avec un effet */
+    }
+  
+    .card:hover .card-img-overlay {
+      opacity: 1; /* Opacité à 1 lors du survol */
+    }
+  
+    .scroll-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff; /* Couleur du texte */
+      cursor: pointer;
+    }
+
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+  </style>
+
+
+
+
+
+
+
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('.card');
+    var animationSpeed = 200;
+
+    cards.forEach(function (card, index) {
+      setTimeout(function () {
+        card.classList.add('visible');
+      }, index * animationSpeed);
+    });
+  });
+</script>
