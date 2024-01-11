@@ -11,121 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 3s, transform 3s;
-    }
-
-    .fade-in.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .custom-arrow-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-left: 20px;
-    }
-
-    .custom-arrow {
-      font-size: 100px;
-      color: #fff;
-      margin-top: 10px;
-      display: inline-block;
-      transform: rotate(45deg);
-    }
-
-    .custom-arrow-container-0 {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-right: 20px;
-    }
-
-    .custom-arrow-0 {
-      font-size: 100px;
-      color: #fff;
-      margin-top: 10px;
-      display: inline-block;
-      transform: rotate(135deg);
-    }
-
-    .owl-carousel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 50px;
-    }
-
-    .owl-item {
-      text-align: center;
-    }
-
-    .owl-item img {
-      max-width: 70%;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    .image {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .image.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .image:hover {
-      transform: scale(1.2);
-    }
-
-    .owl-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1;
-    }
-
-    .owl-prev,
-    .owl-next {
-      font-size: 3rem;
-      color: #fff;
-      background: none;
-      border: none;
-      cursor: pointer;
-      transition: color 0.3s;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .owl-prev {
-      left: 0;
-    }
-
-    .owl-next {
-      right: 0;
-    }
-
-    .owl-prev:hover,
-    .owl-next:hover {
-      color: #0d9714;
-    }
-
-    h1 {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: white;
-    }
-  </style>
+  <link href="style/style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -286,43 +172,6 @@
       </div>
     </div><br><br>
   </div>
-  <style>
-    a {
-      color: #00ff0d;
-      text-decoration: none;
-    }
-
-    .card-img-overlay {
-      background: rgba(0, 0, 0, 0.5);
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-      border-radius: 2rem;
-    }
-
-    .card:hover .card-img-overlay {
-      opacity: 1;
-    }
-
-    .scroll-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      cursor: pointer;
-    }
-
-    .card {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const options = {
@@ -498,26 +347,7 @@
       </div>
     </div>
   </div>
-  <style>
-    .animate__fadeInRight {
-      animation: fadeInRight 1s ease-out;
-    }
 
-    .animate__slideInLeft {
-      animation: slideInLeft 1s ease-out;
-    }
-
-    #valeurs .animate__animated {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-
-    #valeurs .animate__animated.animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const optionsValeurs = {
@@ -526,12 +356,11 @@
         threshold: 0.5
       };
 
-      // Observer for the first section (valeurs)
       const handleIntersectValeurs = (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !entry.target.classList.contains("animated")) {
             entry.target.classList.remove("hidden1");
-            animateSectionValeurs();
+            animateSectionValeurs(entry.target);
             entry.target.classList.add("animated");
             observer.unobserve(entry.target);
           }
@@ -543,8 +372,9 @@
       observerValeurs.observe(targetValeurs);
     });
 
-    function animateSectionValeurs() {
-      var elementsToAnimate = document.querySelectorAll('#valeurs .animate__animated');
+    function animateSectionValeurs(target) {
+      target.classList.add("animate__fadeInRight", "animate__slideInLeft");
+      var elementsToAnimate = target.querySelectorAll('.animate__animated');
       elementsToAnimate.forEach(function (element, index) {
         element.style.opacity = 1;
         element.style.transform = "translateY(0)";
@@ -612,6 +442,152 @@
         </p>
       </div>
     </div>
+
+    <!----------------------Equipe---------------------->
+
+    <div id="equipe" style="background-color: #d6b9ab83;">
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Notre Équipe</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-2 col-md-3">
+            <div class="team-member animated">
+              <img src="../Premier_projet/images/equipe/LAURENTISS2.jpg" alt="Membre de l'équipe 1">
+              <h3>Laurent <br> ISS</h3>
+              <p>Manager</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3">
+            <div class="team-member animated">
+              <img src="../Premier_projet/images/equipe/loic.jpg" alt="Membre de l'équipe 2">
+              <h3>Loic <br> MURAZ</h3>
+              <p>Directeur commerciale</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3">
+            <div class="team-member animated">
+              <img src="../Premier_projet/images/equipe/arnaud_dorian.jpg" alt="Membre de l'équipe 3">
+              <h3>Dorian <br> ARNAUD</h3>
+              <p>Développeur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-1">
+            <div class="team-member animated">
+              <img src="../Premier_projet/images/equipe/francis.jpg" alt="Membre de l'équipe 4">
+              <h3>Francis <br> HENRIOT</h3>
+              <p>Développeur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-1">
+            <div class="team-member animated">
+              <img src="../Premier_projet/images/equipe/yasmine2.jpg" alt="Membre de l'équipe 5">
+              <h3>Yasmine <br> Moumen</h3>
+              <p>Administation des ventes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------Contact---------------------->
+
+  <section id="contact" name="contact">
+    <div id="footerwrap">
+      <div class="container">
+        <div class="col-lg-4">
+          <h3>Adresse</h3>
+          <p>
+            20 Avenue de la Houille Blanche<br /> Seyssinet-Parisset<br /> 38170
+            <br /> FRANCE
+          </p>
+          <br />
+          <br />
+          <h3>Contact</h3>
+          <p>
+            info@solti.fr <br />
+            07 89 51 56 24
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h3>Contactez-nous !</h3>
+          <br>
+          <form id="contactForm" method="post" class="contact-form php-mail-form" action="contactform/Mail3.php">
+            <div class="form-group">
+              <label for="contact-name">Nom</label>
+              <textarea class="form-control" rows="1" style="min-height: 1em;" name="name" id="name"
+                placeholder="Nom"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <textarea class="form-control" rows="1" style="min-height: 1em;" name="email" id="email"
+                placeholder="Email"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea name="message" class="form-control" id="message" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" title="Captcha" name="res" id="res" placeholder="5 + 2 = " maxlength="12" size="12"
+                style="color: black;">
+            </div>
+            <div class="form-send">
+              <button type="submit" class="btn btn-large">Envoyer</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-2">
+          <button class="btn btn-primary">
+            <a href="https://whereby.com/solti-gsm" target="_blank">Whereby</a>
+          </button>
+          <br /><br /><br /><br /><br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/contact/made-in-france.jpg"
+            alt="Made in france" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="copyrights">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <a href="https://www.facebook.com/Soltisoftware/" target="blank"> <img src="images/footer/fbpng.jpg"
+              width="25%" alt="Solti Software Facebook" /> </a>
+        </div>
+        <div class="col-lg-2">
+          <a href="https://www.youtube.com/channel/UCaXGeP8k6KhCqKWtJcMY6iA" target="blank"> <img
+              src="images/footer/ytpng.jpg" width="36%" alt="Solti Software Videos" /> </a>
+        </div>
+        <div class="col-lg-2">
+          <a href="https://www.linkedin.com/company/solti-solutions-et-technologies-innovantes" target="blank"> <img
+              src="images/footer/inpng.jpg" width="25%" alt="Solti Software linkedin" /> </a>
+        </div>
+        <div class="col-lg-2">
+          <a href="mailto:info@solti.fr" target="blank"> <img src="images/footer/mailpng.jpg" width="34%"
+              alt="Solti Software Mail" /> </a>
+        </div>
+        <div class="col-lg-2">
+          <a href="https://whereby.com/solti-gsm" target="blank"><img src="images/footer/logo-whereby.jpg" width="80%"
+              alt="Solti Software Chat" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- FOOTER ///////////////////////////////////////////////////////////////////////////////////// -->
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>Solti</strong>. All Rights Reserved 2020
+      </p>
+    </div>
+  </div>
 </body>
 
 </html>
