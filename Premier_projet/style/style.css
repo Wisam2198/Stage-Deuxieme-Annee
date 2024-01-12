@@ -1,3 +1,9 @@
+@media screen and (max-width: 1499px) {
+  #accueil {
+    width: 90%;
+  }
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(-20px);
@@ -16,27 +22,11 @@
   margin-left: 20px;
 }
 
-.custom-arrow {
-  font-size: 100px;
-  color: #fff;
-  margin-top: 10px;
-  display: inline-block;
-  transform: rotate(45deg);
-}
-
 .custom-arrow-container-0 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
-}
-
-.custom-arrow-0 {
-  font-size: 100px;
-  color: #fff;
-  margin-top: 10px;
-  display: inline-block;
-  transform: rotate(135deg);
 }
 
 .owl-carousel {
@@ -167,44 +157,43 @@ a {
   transform: translateY(0);
 }
 
-/* Ajoutez votre propre style ici */
+/* Exemple de style pour la présentation de l'équipe */
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    /* Exemple de style pour la présentation de l'équipe */
-    .team-member {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.team-member img {
+  border-radius: 50%;
+  width: 170px;
+  /* Taille souhaitée */
+  height: 170px;
+  /* Taille souhaitée */
+  object-fit: cover;
+  /* Assure que l'image conserve son rapport hauteur/largeur */
+  margin-bottom: 15px;
+}
 
-    .team-member img {
-      border-radius: 50%;
-      width: 170px;
-      /* Taille souhaitée */
-      height: 170px;
-      /* Taille souhaitée */
-      object-fit: cover;
-      /* Assure que l'image conserve son rapport hauteur/largeur */
-      margin-bottom: 15px;
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animated {
-      animation: fadeInUp 1s ease-in-out;
-    }
+.animated {
+  animation: fadeInUp 1s ease-in-out;
+}
 
 /* Contact Form */
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 10px 12px;
   border-radius: 0;
   box-shadow: none;
@@ -302,4 +291,32 @@ a {
   margin: 15px 0;
 }
 
+.navbar-nav .nav-item:hover .nav-link {
+  color: #ffffff; /* Changez la couleur à votre préférence */
+  background-color: #c4934a; /* Changez la couleur de fond à votre préférence */
+  border-radius: 10px;
+}
 
+.w100 {
+  width: 100%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w36 {
+  width: 36%;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.w34 {
+  width: 34%;
+}
+
+.w80 {
+  width: 80%;
+}

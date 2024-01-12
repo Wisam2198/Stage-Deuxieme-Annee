@@ -2,17 +2,19 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solti Software</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link href="style/style.css" rel="stylesheet">
+  <link href="./style/style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
   <script>
     $(document).ready(function () {
       var $soltiScan = $(".soltiScan");
@@ -52,8 +54,8 @@
 <body style="background-color: rgb(214, 208, 208)">
   <nav class="navbar navbar-expand-lg" style="background-color: #f1ecd3;">
     <div class="container-fluid">
-      <img src="../Premier_projet/images/Logo-Solti-Petit.png" alt="Logo" width="35" height="35"
-        class="d-inline-block align-text-top me-2" />
+      <img src="images/Logo-Solti-Petit.png" alt="Logo" width="35" height="35"
+        class="d-inline-block align-text-top me-2">
       <a class="navbar-brand">Solti</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +79,7 @@
             <a class="nav-link" href="#avis">Avis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://solti-software.com/fr/comparatif.html" target="_blank"> Plus</a>
@@ -87,29 +89,26 @@
     </div>
   </nav>
 
-  <!----------------------Accueil---------------------->
+  <!-- ACCUEIL ///////////////////////////////////////////////////////////////////////////////////// -->
 
   <div id="accueil">
     <div id="titre" style="margin-left: 300px; margin-top: 100px" class="d-flex align-items-center">
-      <div class="ms-3">
-        <img src="../Premier_projet/images/Logo-Solti.png" class="mx-auto d-block" height="150" width="300"
-          alt="Logo-Solti" />
+      <div class="ms-3 w100">
+        <img src="images/Logo-Solti.png" class="logo-solti" height="150" alt="Logo-Solti">
       </div>
-      <div>
-        <h1 class="titre ms-5" style="color: #3367fb">Bienvenue chez SOLTI</h1>
-      </div>
+      <h1 style="color: #3367fb; margin-right: 220px;">Bienvenue chez SOLTI</h1>
     </div>
-    <br /><br />
+    <br><br>
     <h2 style="color: #0d9714; text-align: center; font-weight: bold">
       Des logiciels agiles, simples et puissants.
     </h2>
-    <br />
-    <img src="../Premier_projet/images/solutions.png" class="mx-auto d-block" />
+    <br>
+    <img src="images/solutions.png" class="mx-auto d-block w40" height="400" alt="Logo-solutions">
   </div>
 
-  <!----------------------Produits--------------s-------->
+  <!-- PRODUITS ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <div id="Produits" class="hidden" style="background-color: rgb(96, 108, 216); margin-top: 0; margin-bottom: 0;">
+  <div id="Produits" class="hidden" style="background-color: rgb(96, 108, 216); margin-top: 0; margin-bottom: 0;"><br>
     <h1 style="text-align: center; color: #fff;">Nos Produits</h1> <br><br>
 
     <div class="card-deck d-flex justify-content-around mx-4">
@@ -205,28 +204,33 @@
     }
   </script>
 
-  <!----------------------SoltiScan---------------------->
+  <!-- SOLTISCAN ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <div id="SoltiScan" class="fade-in soltiScan" style="background-color: #34495e;">
+  <div id="SoltiScan" class="fade-in soltiScan" style="background-color: #34495e;"><br>
     <h1 style="color: rgb(214, 208, 208); text-align: center;">
       SoltiScan
     </h1>
-    <br>
-    <div class="custom-arrow-container">
-      <h4 style="margin-left: 20px">
-        Découvrez nos solutions faciles <br />et puissantes grâce à notre
-        vidéo.
-      </h4>
-      <div class="custom-arrow">&rarr;</div>
+    <br><br>
+    <div style="display: flex; margin-right: 20px;">
+      <div style="flex: 1; margin-right: 20px;">
+        <h4
+          style="text-align: left; margin-left: 20px; margin-top: 50px; border-radius: 20px; background-color: rgb(42, 116, 109); padding: 30px;">
+          Découvrez les solutions que nous proposons, conçues<br> pour être à la fois simples à utiliser et puissantes
+          dans<br>
+          leur fonctionnement. Explorez les fonctionnalités<br> avancées et intuitives de nos produits grâce à notre<br>
+          vidéo
+          informative, qui met en lumière les avantages et<br> les performances de nos solutions. Nous vous invitons<br>
+          donc à
+          regarder notre vidéo pour tirer pleinement parti<br> des opportunités offertes par nos outils innovants.
+        </h4>
+      </div>
+      <iframe class="mx-auto d-block" width="700" height="400"
+        src="https://logiciel-gestion-stock.fr/video/00-video-logiciel-de-stock-gsm.mp4"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <iframe class="mx-auto d-block" width="890" height="500"
-      src="https://logiciel-gestion-stock.fr/video/00-video-logiciel-de-stock-gsm.mp4" frameborder="0"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe><br />
     <div class="custom-arrow-container-0">
-      <div class="custom-arrow-0" style="margin-bottom: -100px;">&rarr;</div>
       <h4 style="text-align: left; margin-right: 20px; margin-bottom: -100px;">
-        Ainsi qu'en photo ci-dessous.
+        Voici quelques photos ci-dessous.
       </h4>
     </div>
 
@@ -240,7 +244,6 @@
       <div class="item"><img src="../Premier_projet/images/solti-scan/img7.jpg" alt="Image 7"></div>
       <div class="item"><img src="../Premier_projet/images/solti-scan/img8.png" alt="Image 8"></div>
     </div>
-  </div>
   </div>
   <button id="scrollToTopBtn" class="btn btn-primary btn-lg"
     style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #0d9714;">
@@ -263,7 +266,7 @@
     });
   </script>
 
-  <!----------------------Nos Valeurs---------------------->
+  <!-- NOS VALEURS ///////////////////////////////////////////////////////////////////////////////////// -->
 
   <div id="valeurs" class="hidden1" style="background-color: rgb(34, 32, 32);">
     <br>
@@ -271,8 +274,8 @@
       <div class="row">
         <div class="col-md-4 animate__animated animate__slideInLeft">
           <a href="https://solti-software.com/fr/saas-cloud-desktop-consommation-energetique.html" target="_blank">
-            <img src="../Premier_projet/images/nos valeurs/empreinte-carbone-solution-web.png"
-              alt="Description de l'image" class="img-fluid">
+            <img src="images/nos_valeurs/empreinte-carbone-solution-web.png" alt="Description de l'image"
+              class="img-fluid">
           </a>
         </div>
         <div class="col-md-7 animate__animated animate__fadeInRight">
@@ -335,8 +338,7 @@
             <br>
             <br>
             <a href="https://youtu.be/lCqv21xMiq8" target="_blank">
-              <img src="../Premier_projet/images/nos valeurs/logiciel-ERP-agile.png" alt="Description de l'image"
-                class="img-fluid">
+              <img src="images/nos_valeurs/logiciel-ERP-agile.png" alt="Description de l'image" class="img-fluid">
             </a>
             <p style="color: #fff; text-align: center;">
               Cliquez pour la vidéo
@@ -382,60 +384,52 @@
     }
   </script>
 
-  <!----------------------Avis---------------------->
+  <!-- AVIS ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <div id="avis" style="background-color: rgb(63, 50, 50); text-align: center;">
+  <div id="avis" style="background-color: rgb(63, 50, 50); text-align: center;"><br>
     <h1 style="text-align: center;">Vos Avis</h1><br><br>
-    <p style="text-align: left; color: white; margin-left: 20px; font-size: 14px;">
-      Vous pouvez retrouver tous nos autres avis en cliquant juste ici !
+    <p style=" color: white; margin-right: 900px; font-size: 14px;">
+      Vous pouvez retrouver plus d'avis en cliquant juste ici !
       <a href="https://fr.trustpilot.com/review/logiciel-gestion-stock.fr" target="_blank">
-        <img src="../Premier_projet/images/Avis/avis-clients.png" alt="Avis client" style="margin-left: 20px;">
+        <img src="images/Avis/avis-clients.png" alt="Avis client" style="margin-left: 20px;">
       </a>
     </p>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
 
-      <div id="jeanne" style="color: white; width: 200px; margin-bottom: 20px; margin-right: 100px;">
-        <img src="../Premier_projet/images/Avis/jeanne.jpg" alt="Erreur chargement"
-          style="border-radius: 50%; width: 100%;"><br><br>
+      <div id="jeanne" style="color: white; width: 200px; margin-bottom: 25px; margin-right: 100px;">
+        <img src="images/Avis/jeanne.jpg" alt="Erreur chargement" style="border-radius: 50%; width: 100%;"><br><br>
         <p style="font-weight: bold; font-style: italic;">Jeanne</p>
         <p>AEB Branger logistique<br>
-          <img src="../Premier_projet/images/Avis/etoiles.png" alt="Erreur chargement"
-            style="border-radius: 50%; width: 50%;"><br>
+          <img src="images/Avis/etoiles.png" alt="Erreur chargement" style="border-radius: 50%; width: 50%;"><br>
           Nous avons une dizaine de <br>terminaux code-barres dans nos <br>agences. Zéro soucis.
         </p>
       </div>
 
       <div id="didier" style="color: white; width: 200px; margin-right: 100px;">
-        <img src="../Premier_projet/images/Avis/Didier.jpg" alt="Erreur chargement"
-          style="border-radius: 50%; width: 100%;"><br><br>
+        <img src="images/Avis/Didier.jpg" alt="Erreur chargement" style="border-radius: 50%; width: 100%;"><br><br>
         <p style="font-weight: bold; font-style: italic;">Didier LACAZE</p>
         <p>Citeos<br>
-          <img src="../Premier_projet/images/Avis/etoiles.png" alt="Erreur chargement"
-            style="border-radius: 50%; width: 50%;"><br>
+          <img src="images/Avis/etoiles.png" alt="Erreur chargement" style="border-radius: 50%; width: 50%;"><br>
           Notre organisation nous imposait beaucoup de contraintes. Seul SOLTI a proposé une <br>solution viable.
         </p>
       </div>
 
       <div id="diane" style="color: white; width: 200px; margin-right: 100px;">
-        <img src="../Premier_projet/images/Avis/Diane.jpg" alt="Erreur chargement"
-          style="border-radius: 50%; width: 100%;"><br><br>
+        <img src="images/Avis/Diane.jpg" alt="Erreur chargement" style="border-radius: 50%; width: 100%;"><br><br>
         <p style="font-weight: bold; font-style: italic;">Diane Beausoleil</p>
         <p>Consultante Quebec<br>
-          <img src="../Premier_projet/images/Avis/etoiles.png" alt="Erreur chargement"
-            style="border-radius: 50%; width: 50%;"><br>
+          <img src="images/Avis/etoiles.png" alt="Erreur chargement" style="border-radius: 50%; width: 50%;"><br>
           Que demander de plus pour une gestion simple. Le SAV est très bien et le logiciel peut être<br> modulé selon
           les
           besoins.
         </p>
       </div>
 
-      <div id="bosco" style="color: white; width: 200px;">
-        <img src="../Premier_projet/images/Avis/Bosco.jpg" alt="Erreur chargement"
-          style="border-radius: 50%; width: 100%;"><br><br>
+      <div id="bosco" style="color: white; width: 200px; margin-top: 25px; margin-right: 50px;">
+        <img src="images/Avis/Bosco.jpg" alt="Erreur chargement" style="border-radius: 50%; width: 100%;"><br><br>
         <p style="font-weight: bold; font-style: italic;">B.BOSCO</p>
         <p>Forezienne Logistique<br>
-          <img src="../Premier_projet/images/Avis/etoiles.png" alt="Erreur chargement"
-            style="border-radius: 50%; width: 50%;"><br>
+          <img src="images/Avis/etoiles.png" alt="Erreur chargement" style="border-radius: 50%; width: 50%;"><br>
           10 personnes utilisent GSM. Il répond à tous nos besoins. Nous avons une logistique <br>sur mesure avec un
           très
           bon support.
@@ -443,31 +437,31 @@
       </div>
     </div>
 
-    <!----------------------Equipe---------------------->
+    <!-- EQUIPE ///////////////////////////////////////////////////////////////////////////////////// -->
 
     <div id="equipe" style="background-color: #d6b9ab83;">
-      <div class="container mt-5">
-        <h2 class="text-center mb-4">Notre Équipe</h2>
+      <div class="container mt-5"><br>
+        <h1 class="text-center mb-4">Notre Équipe</h1><br>
 
         <div class="row justify-content-center">
           <div class="col-lg-2 col-md-3">
-            <div class="team-member animated">
-              <img src="../Premier_projet/images/equipe/LAURENTISS2.jpg" alt="Membre de l'équipe 1">
+            <div class="team-member animated" style="color: white; width: 200px;">
+              <img src="images/equipe/LAURENTISS2.jpg" alt="Membre de l'équipe 1">
               <h3>Laurent <br> ISS</h3>
               <p>Manager</p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-3">
-            <div class="team-member animated">
-              <img src="../Premier_projet/images/equipe/loic.jpg" alt="Membre de l'équipe 2">
+            <div class="team-member animated" style="color: white; width: 200px;">
+              <img src="images/equipe/loic.jpg" alt="Membre de l'équipe 2">
               <h3>Loic <br> MURAZ</h3>
               <p>Directeur commerciale</p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-3">
-            <div class="team-member animated">
+            <div class="team-member animated" style="color: white; width: 200px;">
               <img src="../Premier_projet/images/equipe/arnaud_dorian.jpg" alt="Membre de l'équipe 3">
               <h3>Dorian <br> ARNAUD</h3>
               <p>Développeur</p>
@@ -475,7 +469,7 @@
           </div>
 
           <div class="col-lg-2 col-md-1">
-            <div class="team-member animated">
+            <div class="team-member animated" style="color: white; width: 200px;">
               <img src="../Premier_projet/images/equipe/francis.jpg" alt="Membre de l'équipe 4">
               <h3>Francis <br> HENRIOT</h3>
               <p>Développeur</p>
@@ -483,10 +477,10 @@
           </div>
 
           <div class="col-lg-2 col-md-1">
-            <div class="team-member animated">
+            <div class="team-member animated" style="color: white; width: 200px;">
               <img src="../Premier_projet/images/equipe/yasmine2.jpg" alt="Membre de l'équipe 5">
               <h3>Yasmine <br> Moumen</h3>
-              <p>Administation des ventes</p>
+              <p>Administration des ventes</p>
             </div>
           </div>
         </div>
@@ -494,98 +488,97 @@
     </div>
   </div>
 
-  <!----------------------Contact---------------------->
+  <!-- Contact ///////////////////////////////////////////////////////////////////////////////////// -->
 
-  <section id="contact" name="contact">
+  <section id="contact">
     <div id="footerwrap">
       <div class="container">
-        <div class="col-lg-4">
-          <h3>Adresse</h3>
-          <p>
-            20 Avenue de la Houille Blanche<br /> Seyssinet-Parisset<br /> 38170
-            <br /> FRANCE
-          </p>
-          <br />
-          <br />
-          <h3>Contact</h3>
-          <p>
-            info@solti.fr <br />
-            07 89 51 56 24
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <h3>Contactez-nous !</h3>
-          <br>
-          <form id="contactForm" method="post" class="contact-form php-mail-form" action="contactform/Mail3.php">
-            <div class="form-group">
-              <label for="contact-name">Nom</label>
-              <textarea class="form-control" rows="1" style="min-height: 1em;" name="name" id="name"
-                placeholder="Nom"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email</label>
-              <textarea class="form-control" rows="1" style="min-height: 1em;" name="email" id="email"
-                placeholder="Email"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea name="message" class="form-control" id="message" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="text" title="Captcha" name="res" id="res" placeholder="5 + 2 = " maxlength="12" size="12"
-                style="color: black;">
-            </div>
-            <div class="form-send">
-              <button type="submit" class="btn btn-large">Envoyer</button>
-            </div>
-          </form>
-        </div>
-        <div class="col-lg-2">
-          <button class="btn btn-primary">
-            <a href="https://whereby.com/solti-gsm" target="_blank">Whereby</a>
-          </button>
-          <br /><br /><br /><br /><br /><br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/contact/made-in-france.jpg"
-            alt="Made in france" />
+        <div class="row">
+          <div class="col-lg-4">
+            <h3 style="margin-top: 20px;">Adresse</h3>
+            <p>
+              20 Avenue de la Houille Blanche<br> Seyssinet-Parisset<br> 38170
+              <br> FRANCE
+            </p>
+            <br>
+            <br>
+            <h3>Contact</h3>
+            <p>
+              info@solti.fr <br>
+              04 38 21 34 22
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h3 style="margin-top: 20px;">Contactez-nous !</h3>
+            <br>
+            <form id="contactForm" method="post" class="contact-form php-mail-form" action="contactform/Mail3.php">
+              <div class="form-group">
+                <label id="contact-name">Nom</label>
+                <textarea class="form-control" rows="1" style="min-height: 1em;" name="name" id="name"
+                  placeholder="Nom"></textarea><br>
+              </div>
+              <div class="form-group">
+                <label id="contact-email">Email</label>
+                <textarea class="form-control" rows="1" style="min-height: 1em;" name="email" id="email"
+                  placeholder="Email"></textarea><br>
+              </div>
+              <div class="form-group">
+                <label id="contact-message">Message</label>
+                <textarea name="message" class="form-control" id="message" placeholder="Message"></textarea><br>
+              </div>
+              <div class="form-group">
+                <input type="text" title="Captcha" name="res" id="res" placeholder="5 + 2 = " maxlength="12" size="12"
+                  style="color: black;">
+              </div><br>
+              <div class="form-send">
+                <button type="submit" class="btn btn-large" style="margin-bottom: 100px;">Envoyer</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-2">
+            <a href="https://whereby.com/solti-gsm" target="_blank" class="btn btn-primary" style="margin-top: 110px; display: inline-block;">
+              Whereby
+            </a>            
+            <br><br><br><br><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="text-align: center; font-style: italic;">Made in
+              France</h3><img src="images/contact/france.png" alt="Made in france" style="margin-left: 25px;">
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <div id="copyrights">
+
+  <!-- FOOTER ///////////////////////////////////////////////////////////////////////////////////// -->
+
+  <div id="copyrights" style="background-color: rgb(34, 32, 32); text-align: center;">
     <div class="container">
       <div class="row">
         <div class="col-lg-2">
           <a href="https://www.facebook.com/Soltisoftware/" target="blank"> <img src="images/footer/fbpng.jpg"
-              width="25%" alt="Solti Software Facebook" /> </a>
+              class="w25" alt="Solti Software Facebook" style="margin-top: 20px;"> </a>
         </div>
         <div class="col-lg-2">
           <a href="https://www.youtube.com/channel/UCaXGeP8k6KhCqKWtJcMY6iA" target="blank"> <img
-              src="images/footer/ytpng.jpg" width="36%" alt="Solti Software Videos" /> </a>
+              src="images/footer/ytb.png" class="w36" alt="Solti Software Videos" style="margin-top: 20px;"> </a>
         </div>
         <div class="col-lg-2">
           <a href="https://www.linkedin.com/company/solti-solutions-et-technologies-innovantes" target="blank"> <img
-              src="images/footer/inpng.jpg" width="25%" alt="Solti Software linkedin" /> </a>
+              src="images/footer/inpng.jpg" class="w25" alt="Solti Software linkedin" style="margin-top: 20px;"> </a>
         </div>
         <div class="col-lg-2">
-          <a href="mailto:info@solti.fr" target="blank"> <img src="images/footer/mailpng.jpg" width="34%"
-              alt="Solti Software Mail" /> </a>
+          <a href="mailto:info@solti.fr" target="blank"> <img src="images/footer/mail.png" class="w34"
+              alt="Solti Software Mail" style="margin-top: 20px;"> </a>
         </div>
         <div class="col-lg-2">
-          <a href="https://whereby.com/solti-gsm" target="blank"><img src="images/footer/logo-whereby.jpg" width="80%"
-              alt="Solti Software Chat" /></a>
+          <a href="https://whereby.com/solti-gsm" target="blank"><img src="images/footer/logo-whereby.jpg" class="w80"
+              alt="Solti Software Chat" style="margin-top: 30px;"></a>
         </div>
       </div>
-    </div>
-  </div>
-  
-
-  <!-- FOOTER ///////////////////////////////////////////////////////////////////////////////////// -->
-
-  <div id="copyrights">
-    <div class="container">
+    </div><br><br>
+    <div class="container" style="color: white;">
       <p>
-        &copy; Copyrights <strong>Solti</strong>. All Rights Reserved 2020
-      </p>
+        &copy; Copyrights <strong>Solti</strong>. All Rights Reserved 2024
+      </p><br>
     </div>
   </div>
 </body>
