@@ -22,30 +22,6 @@
   margin-left: 20px;
 }
 
-.custom-arrow-container-0 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 20px;
-}
-
-.owl-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.owl-item {
-  text-align: center;
-}
-
-.owl-item img {
-  max-width: 70%;
-  height: auto;
-  margin: 0 auto;
-}
-
 .image {
   opacity: 0;
   transform: translateY(20px);
@@ -61,14 +37,17 @@
   transform: scale(1.2);
 }
 
-.owl-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+.owl-carousel-container {
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.owl-carousel {
   display: flex;
-  justify-content: space-between;
-  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .owl-prev,
@@ -96,6 +75,17 @@
 .owl-next:hover {
   color: #0d9714;
 }
+
+.owl-item {
+  text-align: center;
+}
+
+.owl-item img {
+  max-width: 100%; /* Ajustez selon vos besoins */
+  height: auto;
+  margin: 0 auto;
+}
+
 
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -157,7 +147,6 @@ a {
   transform: translateY(0);
 }
 
-/* Exemple de style pour la présentation de l'équipe */
 .team-member {
   text-align: center;
   margin-bottom: 30px;
@@ -166,11 +155,8 @@ a {
 .team-member img {
   border-radius: 50%;
   width: 170px;
-  /* Taille souhaitée */
   height: 170px;
-  /* Taille souhaitée */
   object-fit: cover;
-  /* Assure que l'image conserve son rapport hauteur/largeur */
   margin-bottom: 15px;
 }
 
@@ -292,17 +278,18 @@ a {
 }
 
 .navbar-nav .nav-item:hover .nav-link {
-  color: #ffffff; /* Changez la couleur à votre préférence */
-  background-color: #c4934a; /* Changez la couleur de fond à votre préférence */
+  color: #ffffff;
+  background-color: #c4934a;
   border-radius: 10px;
+  position: fixed;
 }
 
 .w100 {
   width: 100%;
 }
 
-.w40 {
-  width: 40%;
+.w60 {
+  width: 60%;
 }
 
 .w36 {
