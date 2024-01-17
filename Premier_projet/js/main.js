@@ -14,8 +14,13 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(".navbar-collapse a").on('click', function () {
-    $(".navbar-collapse.collapse").removeClass('in');
+  $(".navbar-toggler").on('click', function () {
+    $(".navbar-collapse").toggleClass('show');
+  });
+
+  // Gestion du clic sur un lien du menu mobile pour rétracter le menu
+  $(".navbar-nav a").on('click', function () {
+    $(".navbar-collapse").removeClass('show');
   });
 
   $('.carousel').carousel({
